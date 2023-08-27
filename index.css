@@ -1,0 +1,99 @@
+/* * {
+     border: 1px dotted red;
+} */
+
+:root {
+    --ff-sans-serif: 'Arial', sans-serif;
+    --ff-serif: 'Georgia', serif;
+    --ff-monospace: 'Consolas', monospace;
+}
+
+html {
+    font-family: var(--ff-sans-serif);
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+}
+
+.font-sans-serif {
+    font-family: var(--ff-sans-serif);
+}
+
+.font-serif {
+    font-family: var(--ff-serif);
+}
+
+.font-monospace {
+    font-family: var(--ff-monospace);
+    color: var(--color-code);
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: underline;
+    color: var(--color-fg);
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 600px;
+}
+
+.card-title {
+    font-size: 2em;
+    padding: 20px 50px 5px 50px;
+    border-bottom: 1px solid var(--color-divider);
+}
+
+.card-subtitle {
+    padding: 10px 50px 10px 50px;
+}
+
+.card-body {
+    padding: 20px 50px;
+}
+
+.card-body>p {
+    margin-left: 10px;
+}
+
+.card-footer {
+    padding: 10px 50px 10px 50px;
+    font-size: 1em;
+    filter: opacity(0.5);
+    border-top: 1px solid var(--color-divider);
+}
+
+.subtitle {
+    font-size: 1.3em;
+    padding-top: 15px;
+}
+
+.clipboard {
+    cursor: pointer;
+    text-decoration: none !important;
+    font-size: 0.8em;
+    padding: 2px 1px 1px 1px;
+}
+
+.img-profile {
+    width: 128px;
+}
+
+:root {
+    --color-divider: #aaa;
+    --color-bg: #fff;
+    --color-fg: #222;
+    --color-code: #222;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-divider: #555;
+        --color-bg: #222;
+        --color-fg: #ccc;
+        --color-code: #ccc;
+    }
+}
