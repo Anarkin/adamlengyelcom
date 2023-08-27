@@ -1,0 +1,90 @@
+/* * {
+     border: 1px dotted red;
+} */
+
+html {
+    font-family: sans-serif;
+    background-color: var(--bg);
+    color: var(--fg);
+}
+
+.font-serif {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.font-code {
+    font-family: 'Consolas', 'Courier New', Courier, monospace;
+    color: var(--str);
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: underline;
+    color: var(--fg);
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 600px;
+}
+
+.card-title {
+    font-size: 2em;
+    padding: 20px 50px 5px 50px;
+    border-bottom: 1px solid var(--divider);
+}
+
+.card-subtitle {
+    padding: 10px 50px 10px 50px;
+}
+
+.card-body {
+    padding: 20px 50px;
+}
+
+.card-body>p {
+    margin-left: 10px;
+}
+
+.card-footer {
+    padding: 10px 50px 10px 50px;
+    font-size: 1em;
+    filter: opacity(0.5);
+    border-top: 1px solid var(--divider);
+}
+
+.subtitle {
+    font-size: 1.3em;
+    padding-top: 15px;
+}
+
+.clipboard {
+    cursor: pointer;
+    text-decoration: none !important;
+    font-size: 0.8em;
+    padding: 2px 1px 1px 1px;
+}
+
+.img-profile {
+    width: 128px;
+    box-shadow: 0 0 1px 1px var(--fg);
+}
+
+:root {
+    --divider: #aaa;
+    --bg: #fff;
+    --fg: #222;
+    --str: #222;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --divider: #555;
+        --bg: #222;
+        --fg: #ccc;
+        --str: #ccc;
+    }
+}
