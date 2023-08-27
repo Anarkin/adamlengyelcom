@@ -1,0 +1,106 @@
+/* layout */
+
+/* * {
+     border: 1px dotted red;
+} */
+
+html {
+    font-family: sans-serif;
+}
+
+.font-serif {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.font-code {
+    font-family: 'Consolas', 'Courier New', Courier, monospace;
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: underline;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 600px;
+}
+
+.card-title {
+    font-size: 2em;
+    padding: 20px 50px 5px 50px;
+}
+
+.card-subtitle {
+    padding: 10px 50px 10px 50px;
+}
+
+.card-body {
+    padding: 20px 50px;
+}
+
+.card-body>p {
+    margin-left: 10px;
+}
+
+.card-footer {
+    padding: 10px 50px 10px 50px;
+    font-size: 1em;
+    filter: opacity(0.5);
+}
+
+.subtitle {
+    font-size: 1.3em;
+    padding-top: 15px;
+}
+
+.clipboard {
+    cursor: pointer;
+    text-decoration: none !important;
+    font-size: 0.8em;
+    padding: 2px 1px 1px 1px;
+}
+
+.img-profile {
+    width: 128px;
+}
+
+/* theme */
+
+:root {
+    --divider: #aaa;
+    --bg: #fff;
+    --fg: #222;
+}
+
+html {
+    background-color: var(--bg);
+    color: var(--fg);
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: var(--fg);
+}
+
+.card-title {
+    border-bottom: 1px solid var(--divider);
+}
+
+.card-footer {
+    border-top: 1px solid var(--divider);
+}
+
+.img-profile {
+    box-shadow: 0 0 1px 1px var(--fg);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --divider: #555;
+        --bg: #333;
+        --fg: #fff;
+    }
+}
