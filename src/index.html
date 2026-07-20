@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="theme-color"
+      content="#fff"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#222"
+      media="(prefers-color-scheme: dark)"
+    />
+
+    <title>adamlengyel.com</title>
+    <meta name="author" content="Adam Lengyel" />
+    <meta name="description" content="Adam Lengyel's personal website." />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Adam Lengyel" />
+    <meta
+      property="og:description"
+      content="Adam Lengyel's personal website."
+    />
+    <meta property="og:url" content="https://adamlengyel.com" />
+    <meta
+      property="og:image"
+      content="https://adamlengyel.com/resources/profile.jpg"
+    />
+
+    <link rel="icon" type="image/png" href="resources/favicon.png" />
+    <link
+      rel="preload"
+      href="resources/jetbrains-mono-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <div>
+          <h1>Adam Lengyel</h1>
+          <div>Hungary &middot; 1988-12-30</div>
+        </div>
+        <img
+          src="resources/profile.jpg"
+          alt="Adam Lengyel"
+          width="333"
+          height="333"
+        />
+      </header>
+      <div class="card-body">
+        <h2>Contact</h2>
+
+        <ul class="contact">
+          <li>
+            <a href="mailto:lengyel.adam@gmail.com">Email</a>
+            <button
+              class="copy-chip"
+              title="copy to clipboard"
+              aria-label="copy email address to clipboard"
+            >
+              <code>lengyel.adam@gmail.com</code>
+            </button>
+          </li>
+
+          <li>
+            <span data-reveal-link="tel">Phone</span>
+            <button
+              class="copy-chip"
+              data-reveal="p"
+              title="reveal and copy to clipboard"
+              aria-label="reveal phone number and copy to clipboard"
+            >
+              <code>+36 .. ... .. ..</code>
+            </button>
+          </li>
+
+          <li>
+            <a
+              href="https://www.linkedin.com/in/lengyeladam"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="https://github.com/Anarkin?tab=repositories"
+              target="_blank"
+              rel="noopener"
+              >GitHub</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="https://www.facebook.com/lengyeladam"
+              target="_blank"
+              rel="noopener"
+              >Messenger</a
+            >
+          </li>
+
+          <li>
+            Discord
+            <button
+              class="copy-chip"
+              title="copy to clipboard"
+              aria-label="copy Discord handle to clipboard"
+            >
+              <code>anarkin</code>
+            </button>
+          </li>
+
+          <li>
+            <a
+              href="https://steamcommunity.com/id/anarkin/"
+              target="_blank"
+              rel="noopener"
+              >Steam</a
+            >
+          </li>
+
+          <li>
+            Battle.net
+            <button
+              class="copy-chip"
+              title="copy to clipboard"
+              aria-label="copy Battle.net handle to clipboard"
+            >
+              <code>Anarkin#2779</code>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <span id="copy-status" class="sr-only" aria-live="polite"></span>
+  </body>
+</html>

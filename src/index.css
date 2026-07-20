@@ -1,0 +1,205 @@
+/* JetBrains Mono is (c) JetBrains, licensed under the SIL Open Font License 1.1: https://openfontlicense.org */
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: optional;
+  src: url(resources/jetbrains-mono-latin.woff2) format("woff2");
+}
+
+:root {
+  --ff-monospace: "JetBrains Mono", "Consolas", monospace;
+  --color-bg: #fff;
+  --color-fg: #222;
+  --color-divider: #ddd;
+  --color-code-bg: #eee;
+  --color-accent: #a55da0;
+  --color-accent-hover: #7d3e79;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #222;
+    --color-fg: #ccc;
+    --color-divider: #3a3a3a;
+    --color-code-bg: #333;
+    --color-accent: #d69ad1;
+    --color-accent-hover: #eebce9;
+  }
+}
+
+html {
+  font-family: var(--ff-monospace);
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+code {
+  font-family: var(--ff-monospace);
+  background-color: var(--color-code-bg);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  color: var(--color-accent);
+  transition: color 0.15s;
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+  text-decoration-thickness: 2px;
+}
+
+a[target="_blank"]::after {
+  content: "\2197";
+  display: inline-block;
+  margin-left: 3px;
+  font-size: 0.8em;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+a:focus-visible,
+.copy-chip:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+main {
+  width: 100%;
+  max-width: 600px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  border-bottom: 1px dashed var(--color-divider);
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: normal;
+  margin: 0 0 10px 0;
+}
+
+h2 {
+  font-size: 1.3em;
+  font-weight: normal;
+  margin: 0;
+  padding-top: 15px;
+}
+
+.card-body {
+  padding: 20px 50px;
+}
+
+.contact {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact > li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1em 0;
+}
+
+.contact > li:has(.copy-chip)::after {
+  content: "";
+  flex: 1;
+  order: 1;
+  margin: 0 10px;
+  border-bottom: 1px dotted var(--color-divider);
+}
+
+.contact > li .copy-chip {
+  order: 2;
+}
+
+.copy-chip {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.copy-chip code {
+  color: var(--color-accent);
+}
+
+.copy-chip:hover code {
+  outline: 1px solid var(--color-accent);
+}
+
+.copy-chip.copied::before,
+.copy-chip.failed::before {
+  position: absolute;
+  bottom: calc(100% + 3px);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.6em;
+  opacity: 0.6;
+  white-space: nowrap;
+}
+
+.copy-chip.copied::before {
+  content: "copied";
+}
+
+.copy-chip.failed::before {
+  content: "copy failed";
+}
+
+header img {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid var(--color-divider);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  header,
+  .card-body {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  header img {
+    width: 80px;
+    height: 80px;
+  }
+}
