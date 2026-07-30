@@ -1,0 +1,8 @@
+# Normalize text files to LF in the index and in the working tree, overriding
+# core.autocrlf on Windows checkouts. Matches Prettier's default endOfLine: lf.
+* text=auto eol=lf
+
+# Binary assets — never apply line-ending conversion.
+*.woff2 binary
+*.png binary
+*.jpg binary
