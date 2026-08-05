@@ -60,7 +60,9 @@ a:hover {
 }
 
 a[target="_blank"]::after {
+  /* Plain fallback first; the `/ ""` form marks the arrow as decorative for screen readers. */
   content: "\2197";
+  content: "\2197" / "";
   display: inline-block;
   margin-left: 3px;
   font-size: 0.8em;
