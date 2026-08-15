@@ -1,14 +1,14 @@
-/* Cascadia Mono is (c) Microsoft Corporation, licensed under the SIL Open Font License 1.1: https://openfontlicense.org */
+/* JetBrains Mono is (c) JetBrains, licensed under the SIL Open Font License 1.1: https://openfontlicense.org */
 @font-face {
-  font-family: "Cascadia Mono";
+  font-family: "JetBrains Mono";
   font-style: normal;
   font-weight: 400 700;
   font-display: optional;
-  src: url(resources/cascadia-mono-latin.woff2) format("woff2");
+  src: url(resources/jetbrains-mono-latin.woff2) format("woff2");
 }
 
 :root {
-  --ff-monospace: "Cascadia Mono", "Consolas", monospace;
+  --ff-monospace: "JetBrains Mono", "Consolas", monospace;
   --color-bg: #fff;
   --color-fg: #222;
   --color-divider: #ddd;
